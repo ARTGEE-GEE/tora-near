@@ -1,0 +1,67 @@
+.logOut {
+  padding-top: 120px;
+
+  h2 {
+    font-size: 32px;
+    font-family: AkiraExpanded-SuperBold, AkiraExpanded;
+    font-weight: normal;
+    color: #212121;
+    line-height: 37px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .logOut-content {
+    display: flex;
+    justify-content: center;
+
+    .content-left {
+      max-width: 568px;
+      margin-right: 100px;
+
+      h3 {
+        font-size: 24px;
+        font-family: BebasKai;
+        color: #212121;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+
+      .text {
+        p {
+          font-size: 18px;
+          font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+          font-weight: 500;
+          color: #464646;
+          line-height: 50px;
+        }
+
+      }
+    }
+
+    .ant-image {
+      max-width: 508px;
+    }
+
+  }
+}
+@media all and (max-width: 769px) {
+  .logOut {
+    padding-top: .6rem;
+    h2 {
+      font-size: .21rem;
+      width: calc(100% - 20px);
+      margin: 0 auto .3rem;
+    }
+    .logOut-content {
+      flex-direction: column-reverse;
+      .ant-image, .content-left {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+      }
+      .content-left {
+        margin-top: 50px;
+      }
+    }
+  }
+}

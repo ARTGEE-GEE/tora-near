@@ -1,0 +1,15 @@
+.MYNFTS {
+  .my-nft-content {
+    padding: 99px 0;
+    background: #EDEEF5;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .MYNFTS {
+    .my-nft-content {
+      padding: .6rem 0;
+      background: #EDEEF5;
+    }
+  }
+}

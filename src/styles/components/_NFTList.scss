@@ -1,0 +1,46 @@
+.NFT-List {
+  padding: 100px 0;
+  width: calc(100% - 200px);
+  margin: 0 auto;
+  display: grid;
+  // grid-template-columns: repeat(5, 17.73%);
+  grid-gap: 54px;
+  grid-row-gap: 61px;
+  .NftItem {
+    .item {
+      .title {
+        font-size: 21px;
+        font-family: BebasKai;
+        color: #212121;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 769px) {
+  .NFT-List {
+    padding: .6rem 0;
+    width: calc(100% - 60px);
+    grid-template-columns: repeat(1, 100%);
+
+  }
+}
+
+
+@media all and (min-width: 1025px){
+  .NFT-List {
+    grid-template-columns: repeat(3, 29.7%);
+
+  }
+}
+
+@media all and (min-width: 1225px) {
+  .NFT-List {
+    grid-template-columns: repeat(5, 17.73%);
+
+  }
+}
+
+

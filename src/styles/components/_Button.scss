@@ -1,0 +1,50 @@
+#button {
+  background: #9F353A;
+  border-radius: 3px;
+  text-align: center;
+  cursor:pointer;
+  &:hover{
+    background: #80282C;
+  }
+
+  a {
+    display: block;
+    font-family: AkiraExpanded-SuperBold, AkiraExpanded,serif;
+    font-weight: normal;
+    color: #FFFFFF;
+    position: relative;
+
+    .img {
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@media all and (max-width: 769px){
+  .btn{
+    width:2.01rem;
+    height:0.475rem;
+    margin: 0 auto;
+    a{
+      font-size: 0.12rem;
+      line-height: 0.475rem;
+    }
+    .img{
+      width: 0.7rem;
+      top:-0.22rem;
+    }
+  }
+}
+.btn{
+  width: 275px;
+  height: 65px;
+  a{
+    font-size: 16px;
+    line-height: 65px;
+  }
+  .img{
+    width: 97px;
+    top:-6px;
+  }
+}
