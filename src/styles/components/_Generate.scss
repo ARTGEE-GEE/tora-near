@@ -42,6 +42,7 @@
       font-weight: normal;
       color: #FFFFFF;
       line-height: 16px;
+      position: relative;
       z-index: 30;
 
       &:hover {
@@ -226,13 +227,54 @@
 }
 
 @media all and (max-width: 960px) {
+  
   .generate {
     .generate-btn {
       flex-wrap: wrap;
+      justify-content: space-around;
       .join, .gift-links {
-        width: 200px;
+        width: 1.58rem;
         .buy-more-btn {
           width: 100%;
+          line-height: 100%;
+        }
+      }
+      .gift-links {
+        .ant-radio-group {
+          .ant-radio-wrapper {
+            margin-top: .08rem;
+          }
+        }
+        &>span {
+          font-size: .12rem;
+          line-height: .16rem;
+        }
+        
+      }
+      .join {
+        .ant-radio-group {
+          transform: translate(0);
+  
+        }
+      }
+      .send-NFT {
+        width: calc(100% - .8rem);
+        margin: .5rem auto 0;
+        .buy-more-btn {
+          width: 100%;
+        }
+      }
+      .ant-radio-group {
+        .ant-radio-wrapper {
+          margin-top: .45rem;
+          &::after {
+            height: calc(0.45rem + 72px);
+            
+          }
+          &>span:nth-of-type(2) {
+            margin-left: .2rem;
+          }
+          
         }
       }
       .buy-more-btn {
@@ -241,3 +283,4 @@
     }
   }
 }
+

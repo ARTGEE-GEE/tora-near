@@ -23,7 +23,7 @@ function Router() {
       <ScrollToTop>
         <Switch>
           <Route exact path={ '/' } component={ Buy } />
-          <Route exact path={ '/MYNFTS' } component={ MYNFTS } />
+          <Route exact path={ '/my-nfts' } component={ MYNFTS } />
         </Switch>
       </ScrollToTop>
     </ViewportProvider>

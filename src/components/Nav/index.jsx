@@ -20,7 +20,7 @@ function Nav(props) {
   return (
     <div id="nav" style={{background:background,position:position,top:'0'}}>
     <div className="w">
-      <a onClick={()=>scrollToAnchor('app')} style={{cursor:'pointer'}}><h1 className="logo">TORA</h1></a>
+      <a href={'https://tora.city/'} style={{cursor:'pointer'}}><h1 className="logo">TORA</h1></a>
       {!navType && <>
         <ul className="nav-social">
         <li><a href="https://opensea.io/collection/toracity" target="_blank"></a></li>
@@ -29,9 +29,9 @@ function Nav(props) {
       </ul>
       <ul className="nav-tabs">
         {
-          navData.map((value,index) => <li key={index}><a onClick={()=>scrollToAnchor(`${value.name}`)}>{ value.name }</a></li>)
+          navData.map((value,index) => <li key={index}><a href={`http://localhost:8080/#${value.name}`}>{ value.name }</a></li>)
         }
-        <li><NavLink to="/MYNFTS">MY NFTS</NavLink></li>
+        <li><NavLink to="/my-nfts">MY NFTS</NavLink></li>
       </ul>
       </>}
 
@@ -45,9 +45,9 @@ function Nav(props) {
     {navType && <div className="menuItem" style={{height: menuHeight}}>
       <ul className="top-nav" ref={menuItem1}>
         {
-          navData.map((value, index) => <li key={index}><a onClick={()=>scrollToAnchor(`${value.name}`)}>{ value.name }</a></li>)
+          navData.map((value, index) => <li key={index}><a href={`https://tora.city/#${value.name}`}>{ value.name }</a></li>)
         }
-        <li><NavLink to="/MYNFTS">MY NFTS</NavLink></li>
+        <li><NavLink to="/my-nfts">MY NFTS</NavLink></li>
       </ul>
       <ul className="bottom-social" ref={menuItem2}>
         <li><a href="https://opensea.io/collection/toracity" target="_blank"></a></li>
