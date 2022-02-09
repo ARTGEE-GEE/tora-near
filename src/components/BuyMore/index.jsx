@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import BuyMoreBtn from '../BuyMoreBtn';
 import useBuy from '../../hooks/useBuy';
@@ -10,7 +10,6 @@ const BuyMore = ({ isLinkDrop, className }) => {
   const numChange = e => {
     setNum(e.target.value)
     handleNumberClick(e.target.value)
-    console.log(e.target.value)
   }
   const {
     text,

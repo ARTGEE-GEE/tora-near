@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useState } from 'react'
 
 const BuyMoreBtn = ({ className, text, onClick }) => {
   return <button

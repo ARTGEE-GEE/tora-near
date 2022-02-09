@@ -6,7 +6,7 @@ const NFTList = () => {
   const { state, update } = useContext(appStore);
   const { app } = state;
 
-  console.log(app.misfitsArray,'-=-=-')
+  console.log(app.misfitsArray,'app.misfitsArray')
   const handleClick = (revealMisfits) => {
     const newRevealMisfits = { ...app.revealMisfits, ...revealMisfits };
 
@@ -16,17 +16,17 @@ const NFTList = () => {
   return (
     <div style={{background: '#fff'}}>
       <div className="NFT-List">
+        {/* <NftItem />
         <NftItem />
         <NftItem />
         <NftItem />
         <NftItem />
         <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        {/* {app.misfitsArray.map((item) => (
+        <NftItem isReveal={true}/>
+        <NftItem isReval={true}/>
+        <NftItem isReveal={true}/>
+        <NftItem isReval={true}/> */}
+        {app.misfitsArray.map((item) => (
           <NftItem
             key={item.token_id}
             item={item.metadata}
@@ -34,7 +34,7 @@ const NFTList = () => {
             urlIpfs={app.urlIpfs}
             onClick={handleClick}
           />
-        ))} */}
+        ))}
       </div>
 
     </div>

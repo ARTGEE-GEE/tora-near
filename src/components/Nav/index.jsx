@@ -1,5 +1,4 @@
 import '../../styles/components/_Nav.scss'
-import { scrollToAnchor } from '../../utils/ScrollTo'
 import { useState, useRef, memo } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -23,15 +22,17 @@ function Nav(props) {
       <a href={'https://tora.city/'} style={{cursor:'pointer'}}><h1 className="logo">TORA</h1></a>
       {!navType && <>
         <ul className="nav-social">
-        <li><a href="https://opensea.io/collection/toracity" target="_blank"></a></li>
-        <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank"></a></li>
-        <li><a href="https://twitter.com/_ProjectTora_" target="_blank"></a></li>
+        <li><a href="https://opensea.io/collection/toracity" target="_blank" rel="noreferrer">opensea</a></li>
+        <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank" rel="noreferrer">discord</a></li>
+        <li><a href="https://twitter.com/_ProjectTora_" target="_blank" rel="noreferrer">twitter</a></li>
       </ul>
       <ul className="nav-tabs">
         {
-          navData.map((value,index) => <li key={index}><a href={`http://localhost:8080/#${value.name}`}>{ value.name }</a></li>)
+          navData.map((value,index) => <li key={index}><a href={`https://tora.city/#${value.name}`}>{ value.name }</a></li>)
         }
         <li><NavLink to="/my-nfts">MY NFTS</NavLink></li>
+        <li><NavLink to="/link-drop">Link Drop</NavLink></li>
+
       </ul>
       </>}
 
@@ -48,11 +49,12 @@ function Nav(props) {
           navData.map((value, index) => <li key={index}><a href={`https://tora.city/#${value.name}`}>{ value.name }</a></li>)
         }
         <li><NavLink to="/my-nfts">MY NFTS</NavLink></li>
+        <li><NavLink to="/link-drop">Link Drop</NavLink></li>
       </ul>
       <ul className="bottom-social" ref={menuItem2}>
-        <li><a href="https://opensea.io/collection/toracity" target="_blank"></a></li>
-        <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank"></a></li>
-        <li><a href="https://twitter.com/_ProjectTora_" target="_blank"></a></li>
+        <li><a href="https://opensea.io/collection/toracity" target="_blank" rel="noreferrer">opensea</a></li>
+        <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank" rel="noreferrer">discord</a></li>
+        <li><a href="https://twitter.com/_ProjectTora_" target="_blank" rel="noreferrer">twitter</a></li>
       </ul>
     </div>}
   </div>

@@ -1,7 +1,8 @@
 import { Switch, Route } from 'react-router-dom'
 import {ScrollToTop} from '../utils/ScrollTo'
-import Buy from '../views/Buy'
+import Buy from '../views/NoNfts'
 import MYNFTS from '../views/MYNFTS'
+import LinkDrop from '../views/LinkDrop'
 import { ViewportProvider } from '../utils/viewportContext'
 import { appStore, onAppMount } from '../state/app'
 import React, { useEffect, useContext } from 'react'
@@ -14,7 +15,6 @@ function Router() {
 
   const onMount = () => {
     dispatch(onAppMount())
-    console.log(dispatch)
   };
 
   useEffect(onMount, []);
@@ -22,8 +22,8 @@ function Router() {
     <ViewportProvider>
       <ScrollToTop>
         <Switch>
-          <Route exact path={ '/' } component={ Buy } />
           <Route exact path={ '/my-nfts' } component={ MYNFTS } />
+          <Route exact path={ '/link-drop' } component={ LinkDrop } />
         </Switch>
       </ScrollToTop>
     </ViewportProvider>

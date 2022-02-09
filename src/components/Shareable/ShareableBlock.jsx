@@ -1,15 +1,13 @@
 import { useContext } from 'react'
 import { appStore } from '../../state/app';
-import { useLocation } from 'react-router-dom';
 import BuyMoreBtn from '../BuyMoreBtn';
 import BuyMore from '../BuyMore';
 
 const GenerateBlock = () => {
-  const { pathname } = useLocation();
   return(
     <div className="generate">
-      <h2>You don't have a <span>{pathname === '/link-drop' ? 'LinkDrops' : 'NFT'}</span> yet</h2>
-      <div className='btn-buy-more'>Click “<span>{pathname === '/link-drop' ? 'Generate gift Links' : 'Buy more'}</span>” to buy</div>
+      <h2>You don't have a NFT yet</h2>
+      <div className='btn-buy-more'>Click “<span>Buy more</span>” to buy</div>
       <GenerateBtn /> 
   </div>
   )

@@ -5,10 +5,8 @@ import Modal from '../Modal';
 
 
 const Layout = ({ children }) => {
-
   const { state } = useContext(appStore);
   const { modalOpen } = state.app;
-  console.log(modalOpen,'-=--=-=-=-=')
   return (
     <>
       {children}

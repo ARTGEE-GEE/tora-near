@@ -76,6 +76,7 @@
         display: inline-block;
         width: 100%;
         height: 100%;
+
       }
     }
 
@@ -236,5 +237,9 @@
   li:nth-of-type(3) a {
     background: url('https://tora-assets.oss-cn-hongkong.aliyuncs.com/images/navigation/SocialIcon/Twittericon@3x.png') no-repeat;
     background-size: contain;
+  }
+  li>a {
+    text-indent: -200%;
+    overflow: hidden;
   }
 }

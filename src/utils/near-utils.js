@@ -59,8 +59,17 @@ export const getPrice = async (near) => {
     contract.cost_per_token({ num: 1, minter}),
     contract.cost_of_linkdrop({minter}),
   ]);
-  
-  console.log(discount)
+
+  // let [discount, tenTokenCost, tokenStorage, oneTokenCost, costLinkDrop] = await Promise.all([
+  //   contract.discount({
+  //     num: 10
+  //   }),
+  //   contract.total_cost({ num: 10 }),
+  //   contract.token_storage_cost(),
+  //   contract.cost_per_token({ num: 1 }),
+  //   contract.cost_of_linkdrop(),
+  // ]);
+
   const discountFormat = formatNearAmount(discount);
   const tenTokenFormat = formatNearAmount(tenTokenCost);
   const oneTokenFormat = formatNearAmount(oneTokenCost);
