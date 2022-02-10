@@ -1,4 +1,4 @@
-import '../../styles/components/_Button.scss'
+// import '../../styles/components/_Button.scss'
 function ToraButton({src='javascript:void(0)', value, target="_blank"}) {
   return (
     <div id="button" className="btn">

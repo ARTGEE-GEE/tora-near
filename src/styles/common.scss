@@ -9,51 +9,63 @@
       background: #1C1C1C url('https://tora-assets.oss-cn-hongkong.aliyuncs.com/images/AirdropRules/TigerTranparent3x.png') no-repeat center 0/43%;
       position: relative;
 
-      .ant-image {
+      &>.ant-image {
         position: absolute;
         bottom: -7px;
         left: 50%;
         transform: translateX(-50%);
-      }
-
-      .connect-btn {
-        width: 256px;
-        height: 61px;
-        background: #9F353A;
-        border-radius: 1px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        div {
-          font-size: 18px;
-          font-family: AkiraExpanded-SuperBold, AkiraExpanded;
-          font-weight: normal;
-          color: #FFFFFF;
-          line-height: 21px;
-        }
-
-        img {
-          position: absolute;
-          width: 90px;
-          top: -5px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
       }
     }
 
 
   }
 }
+.connect-btn {
+  width: 256px;
+  height: 61px;
+  background: #9F353A;
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  div {
+    font-size: 18px;
+    font-family: AkiraExpanded-SuperBold, AkiraExpanded;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 21px;
+  }
+
+  img {
+    position: absolute;
+    width: 90px;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.footer {
+  background: #000;
+
+  .footerTitle {
+    p {
+      font-family: SourceHanSansCN-Normal, SourceHanSansCN, serif;
+      color: #808080;
+      text-align: center;
+    }
+  }
+}
 @media all and (max-width: 769px) {
 
   .no-nfts,
   .link-drop {
     .content {
       padding-top: .59rem;
+      .banner {
+        background: #1C1C1C url('https://tora-assets.oss-cn-hongkong.aliyuncs.com/images/AirdropRules/TigerTranparent3x.png') no-repeat center 0/70%;
+      }
     }
   }
 
@@ -105,6 +117,7 @@
           background-size: contain;
         }
       }
+
     }
 
     .footerTitle {
@@ -120,29 +133,7 @@
     }
 
   }
-}
 
-.w {
-  width: calc(100% - 600px);
-  margin: 0 auto;
-}
-
-.footer {
-  background: #000;
-  padding-top: 87px;
-
-  .footerTitle {
-    border-top: 1px solid #474747;
-    margin: 48px auto 0;
-
-    p {
-      font-size: 18px;
-      font-family: SourceHanSansCN-Normal, SourceHanSansCN, serif;
-      color: #808080;
-      text-align: center;
-      line-height: 145px;
-    }
-  }
 }
 
 @media all and (min-width: 769px) {

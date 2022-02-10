@@ -1,0 +1,43 @@
+$secondary-color: #000;
+$blue-color: #b85a5f;
+.shareable-link {
+  // width: 279px;
+  padding: 19px 0 19px 22px;
+  background-color: $white;
+  font-size: 14px;
+  line-height: 19px;
+  color: $secondary-color;
+  width: 279px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  border: 1px solid #C7C7C7;
+
+  &__text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+  }
+
+  &__copied {
+    position: absolute;
+    padding: 5px 15px;
+    background-color: $blue-color;
+    border-radius: 100px;
+    color: $white;
+    font-size: 12px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__animation {
+    opacity: 1;
+    top: 10px;
+  }
+}

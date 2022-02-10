@@ -27,12 +27,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 155px;
+    right: 295px;
 
 
     li {
       float: left;
-      padding: 0 20px;
+      padding: 0 10px;
 
       a {
         width: 54px;
@@ -56,7 +56,7 @@
   .nav-social {
     float: right;
     position: absolute;
-    right: 0px;
+    right: 200px;
     top: 50%;
     transform: translateY(-50%);
 
@@ -64,7 +64,7 @@
       width: 30px;
       height: 30px;
       float: left;
-      margin-left: 20px;
+      margin-left: 10px;
       transition: transform 0.2s;
 
       &:hover {
@@ -83,15 +83,30 @@
 
   }
 
+  .connect-btn {
+    transform: translate(0, -50%);
+    width: 175px;
+    height: 50px;
+    left: auto;
+    right: 0;
+    div {
+      font-size: 13px;
+    }
+    img {
+      width: 75px;
+    }
+  }
 }
 
-@media all and (min-width: 1260px) {
+
+
+@media all and (min-width: 1325px) {
   .menu {
     background: #fff;
   }
 }
 
-@media all and (max-width: 1260px) {
+@media all and (max-width: 1325px) {
   #nav {
     .menu {
       float: right;
@@ -147,6 +162,10 @@
         }
       }
     }
+    .connect-btn {
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
   }
 
 }
@@ -183,7 +202,7 @@
 
         li {
           &:nth-of-type(n+2) {
-            margin-top: 0.3rem;
+            margin-top: 0.2rem;
           }
 
           a {
@@ -217,6 +236,14 @@
         }
       }
 
+    }
+
+    .connect-btn {
+      position: static;
+      // top: auto;
+      // bottom: 0;
+      // left: 50%;
+      transform: translate(0, 0);
     }
 
 

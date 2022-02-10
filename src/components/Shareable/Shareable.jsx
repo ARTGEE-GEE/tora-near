@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import GenerateBlock from "./GenerateBlock"
 import LogOut from './LogOut'
 import { appStore } from '../../state/app';
-import '../../styles/components/_Generate.scss'
+// import '../../styles/components/_Generate.scss'
 const Generate = () => {
   
   const { state, update } = useContext(appStore);

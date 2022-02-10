@@ -32,7 +32,7 @@ const SaveBtn = ({ linkDropArray }) => {
       target="_blank"
     >
       Save
-      <p className={`save-btn__saved ${animation}`}>saved</p>
+      {/* <p className={`save-btn__saved ${animation}`}>saved</p> */}
     </a>
   );
 };

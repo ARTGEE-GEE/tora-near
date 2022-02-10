@@ -31,8 +31,7 @@
   .generate-btn {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
-
+    margin-bottom: 0;
     .buy-more-btn {
       width: 246px;
       height: 57px;
@@ -223,13 +222,14 @@
 
 }
 
-@media all and (max-width: 960px) {
+@media all and (max-width: 769px) {
 
   .generate {
     .generate-btn {
       flex-wrap: wrap;
       justify-content: space-around;
-
+      width: calc(100%);
+      padding: .5rem 0;
       .join,
       .gift-links {
         width: 1.58rem;
@@ -257,7 +257,6 @@
       .join {
         .ant-radio-group {
           transform: translate(0);
-
         }
       }
 
@@ -288,6 +287,45 @@
 
       .buy-more-btn {
         font-size: .12rem;
+      }
+    }
+  }
+}
+@media all and (min-width: 769px) {
+  .generate {
+    .generate-btn {
+      padding: 75px 0;
+      width: calc(100% - 50px);
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .send-NFT {
+        width: calc(100% - 100px);
+        max-width: 500px;
+        margin: 50px auto 0;
+
+        .buy-more-btn {
+          width: 100%;
+        }
+      }
+
+      .gift-links {
+        .ant-radio-group {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+}
+@media all and (min-width: 1025px) {
+  .generate {
+    .generate-btn {
+      padding: 75px 0;
+      width: calc(100% - 200px);
+      flex-wrap: nowrap;
+      .send-NFT {
+        width: 246px;
+        margin: 0;
       }
     }
   }

@@ -7,14 +7,15 @@ import Footer from '../../layouts/Footer'
 import NFTList from '../../components/NFTList';
 import { useViewport } from '../../utils/viewportContext'
 import { GenerateBtn } from '../../components/Generate/GenerateBlock';
-import '../../styles/MyNfts.scss'
+// import '../../styles/MyNfts.scss'
 import NoNfts from '../NoNfts'
+import ModuleBanner from '../../components/ModuleBanner';
 
 const MYNFTS = () => {
   const [ navType, setNavType ] = useState(false)
   const { width } = useViewport();
   useEffect(() => {
-    setNavType(width < 1260 ? true : false)
+    setNavType(width < 1325 ? true : false)
   },[width])
   const history = useHistory();
   const { state } = useContext(appStore);
@@ -29,9 +30,9 @@ const MYNFTS = () => {
   return(
     <div className="MYNFTS">
       <Nav position="fixed" navType={ navType }/>
-
+      <ModuleBanner />
       {nftsCount ? (<div className="my-nft-content">
-          <NFTList />
+          <NFTList navType={navType}/>
           <div className="generate">
             <GenerateBtn />
           </div>

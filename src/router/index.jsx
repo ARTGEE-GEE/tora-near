@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import {ScrollToTop} from '../utils/ScrollTo'
 import Buy from '../views/NoNfts'
 import MYNFTS from '../views/MYNFTS'
@@ -24,6 +24,7 @@ function Router() {
         <Switch>
           <Route exact path={ '/my-nfts' } component={ MYNFTS } />
           <Route exact path={ '/link-drop' } component={ LinkDrop } />
+          <Redirect from={ '/'} to={'/my-nfts'} />
         </Switch>
       </ScrollToTop>
     </ViewportProvider>

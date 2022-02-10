@@ -1,5 +1,5 @@
 import { Image } from 'antd'
-import '../../styles/components/_LogOut.scss'
+// import '../../styles/components/_LogOut.scss'
 const LogOut = () => {
   return (
     <div className="logOut">

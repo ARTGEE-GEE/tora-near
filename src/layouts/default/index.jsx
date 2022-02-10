@@ -1,12 +1,8 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { appStore, onAppMount } from '../../state/app';
 import { BrowserRouter } from 'react-router-dom'
 import Router from '../../router'
 import Layout from '../Layout';
-// import routes from './routes';
-// import './styles/Main.scss';
-import { useViewport } from '../../utils/viewportContext'
-import Nav from '../../components/Nav';
 
 const Main = () => {
   const { dispatch } = useContext(appStore);

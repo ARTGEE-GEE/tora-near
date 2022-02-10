@@ -1,0 +1,16 @@
+$secondary-color: #000;
+.shareable-input {
+  padding: 15px;
+  background-color: $white;
+  font-size: 14px;
+  line-height: 19px;
+  color: $secondary-color;
+  width: 279px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  outline: none;
+  border: none;
+  border: 1px solid #C7C7C7;
+  padding: 19px 0 19px 22px;
+
+}

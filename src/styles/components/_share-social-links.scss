@@ -1,0 +1,43 @@
+$red-color: #9F353A;
+$purpure-color: purple;
+.share-social-links {
+  &__purpure {
+    svg {
+      border-radius: 100px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    path {
+      fill: $purpure-color;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      path {
+        fill: $purpure-color-hover;
+      }
+    }
+  }
+
+  &__red {
+    svg {
+      border-radius: 100px;
+      transition: all 0.2s ease-in-out;
+    }
+    path {
+      fill: $red-color;
+    }
+
+    &:hover {
+      svg {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

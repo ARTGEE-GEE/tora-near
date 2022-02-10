@@ -1,4 +1,4 @@
-import '../../styles/NoNfts.scss'
+// import '../../styles/NoNfts.scss'
 import { Image } from 'antd'
 import React, { useContext, memo } from 'react';
 import { appStore } from '../../state/app';
@@ -10,9 +10,6 @@ function NoNfts() {
   
   const { state } = useContext(appStore);
   const { wallet, account } = state;
-  console.log(state, 'state')
-  console.log(wallet, 'wallet')
-  console.log(account, 'account')
   return (
     <div className="no-nfts">
       <div className="content">

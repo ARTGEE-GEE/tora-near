@@ -1,11 +1,10 @@
 import { appStore } from '../../state/app';
 import React, { useContext } from 'react';
 import NftItem from '../NftItem'
-import '../../styles/components/_NFTList.scss'
-const NFTList = () => {
+// import '../../styles/components/_NFTList.scss'
+const NFTList = (props) => {
   const { state, update } = useContext(appStore);
   const { app } = state;
-
   console.log(app.misfitsArray,'app.misfitsArray')
   const handleClick = (revealMisfits) => {
     const newRevealMisfits = { ...app.revealMisfits, ...revealMisfits };
@@ -16,16 +15,6 @@ const NFTList = () => {
   return (
     <div style={{background: '#fff'}}>
       <div className="NFT-List">
-        {/* <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem />
-        <NftItem isReveal={true}/>
-        <NftItem isReval={true}/>
-        <NftItem isReveal={true}/>
-        <NftItem isReval={true}/> */}
         {app.misfitsArray.map((item) => (
           <NftItem
             key={item.token_id}
@@ -33,8 +22,10 @@ const NFTList = () => {
             isReveal={app.revealMisfits[item.token_id]}
             urlIpfs={app.urlIpfs}
             onClick={handleClick}
+            navType={props.navType}
           />
         ))}
+        
       </div>
 
     </div>

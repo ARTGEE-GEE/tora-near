@@ -1056,6 +1056,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.16.7":
+  version "7.17.2"
+  resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.16.7", "@babel/template@^7.3.3":
   version "7.16.7"
   resolved "https://registry.npmmirror.com/@babel/template/download/@babel/template-7.16.7.tgz#8d126c8701fde4d66b264b3eba3d96f07666d155"
@@ -1523,6 +1530,15 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
+"@tanem/svg-injector@^10.1.15":
+  version "10.1.16"
+  resolved "https://registry.npmmirror.com/@tanem/svg-injector/-/svg-injector-10.1.16.tgz#d66c93d80870adfe73dc644e5b1d1accaefb8283"
+  integrity sha512-eKVUBkNaqEgpkrFi7+qC297aiq6XXocYcQSAfOtMJ5TJYUtHh6mSLbdmb5flTxD4zSyqtmBO7v1lY70OxY14Nw==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    content-type "^1.0.4"
+    tslib "^2.3.1"
+
 "@testing-library/dom@^8.0.0":
   version "8.11.3"
   resolved "https://registry.npmmirror.com/@testing-library/dom/download/@testing-library/dom-8.11.3.tgz#38fd63cbfe14557021e88982d931e33fb7c1a808"
@@ -1780,6 +1796,11 @@
   version "2.4.3"
   resolved "https://registry.npmmirror.com/@types/prettier/download/@types/prettier-2.4.3.tgz#a3c65525b91fca7da00ab1a3ac2b5a2a4afbffbf"
   integrity sha512-QzSuZMBuG5u8HqYz01qtMdg/Jfctlnvj1z/lYnIDXs/golxw0fxtRAHd9KrzjR7Yxz1qVeI00o0kiO3PmVdJ9w==
+
+"@types/prop-types@^15.7.4":
+  version "15.7.4"
+  resolved "https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
 "@types/q@^1.5.1":
   version "1.5.5"
@@ -3069,7 +3090,7 @@ content-disposition@0.5.4:
   dependencies:
     safe-buffer "5.2.1"
 
-content-type@~1.0.4:
+content-type@^1.0.4, content-type@~1.0.4:
   version "1.0.4"
   resolved "https://registry.npmmirror.com/content-type/download/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha1-4TjMdeBAxyexlm/l5fjJruJW/js=
@@ -7090,7 +7111,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmmirror.com/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7625,6 +7646,16 @@ react-router@5.2.1:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-svg@^14.1.10:
+  version "14.1.10"
+  resolved "https://registry.npmmirror.com/react-svg/-/react-svg-14.1.10.tgz#a43e8cb2e1501479f0e6fcdf7ef831fc579839a4"
+  integrity sha512-fiJP7KfNMHkqM2fVS785fo4IMk3mWFOImssz0fD/iY7EZjdcraZTO35n5GBXii48TtQfsk5wMpJWHtjNukEG7w==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    "@tanem/svg-injector" "^10.1.15"
+    "@types/prop-types" "^15.7.4"
+    prop-types "^15.8.1"
 
 react@^17.0.2:
   version "17.0.2"
@@ -8698,7 +8729,7 @@ tslib@^1.8.1:
   resolved "https://registry.npmmirror.com/tslib/download/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3:
+tslib@^2.0.3, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmmirror.com/tslib/download/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==

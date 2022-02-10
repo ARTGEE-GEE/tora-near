@@ -8,25 +8,23 @@ import NoNfts from '../NoNfts';
 import ShareableCircle from './ShareableCircle'
 import ShareableLink from './ShareableLink'
 import ShareableInput from './ShareableInput'
-// import ShareSocialLinks from '../../components/ShareSocialLinks'
 import SaveBtn from './SaveBtn'
-import '../../styles/LinkDrop.scss'
-
-
-
+import {GenerateBtn} from '../../components/Generate/GenerateBlock'
+import { Image } from 'antd'
+import ShareSocialLinks from '../../components/ShareSocialLinks'
+import ModuleBanner from '../../components/ModuleBanner';
 
 const LinkDrop = () => {
   const [ navType, setNavType ] = useState(false)
   const { width } = useViewport();
   useEffect(() => {
-    setNavType(width < 1260 ? true : false)
+    setNavType(width < 1220 ? true : false)
   },[width])
   const { state, update } = useContext(appStore);
   const { app, account } = state;
 
   const [linkDropArray, setLinkDropArray] = useState([...app.linkDropArray]);
   console.log(linkDropArray.length)
-  const a = {};
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -36,7 +34,7 @@ const LinkDrop = () => {
     if (app.linkDropArray.length) {
       setLinkDropArray([...app.linkDropArray]);
     }
-  }, [app.linkDropArray.length]);
+  }, [app.linkDropArray]);
 
   const handleBlur = (e) => {
     const text = e.target.value;
@@ -73,43 +71,83 @@ const LinkDrop = () => {
     <>
       <Nav position="fixed" navType={ navType }/>
       {
-        !linkDropArray.length ? (
+        linkDropArray.length ? (
           <div className="link-drop">
           <div className="content">
-            <div className="banner" style={{height: '800px'}}>
-            </div>
-            <div className="link-drop-center">
-              <h2>choose an nft blind box gift link share with friends of tora</h2>
-              <div>
-                <ul>
-                  <li className="link-drop__item" key={a.id}>
-                    <ShareableCircle
-                      activeLinkForShare={activeIndex}
-                      onClick={handleCircleClick}
-                      index={1}
-                    />
-                    <div className="link-drop__inputs">
-                      <ShareableLink link={a.link} />
-                      <ShareableInput
-                        text={a.text}
-                        index={1}
-                        onBlur={handleBlur}
-                      />
+            <div className="banner">
+              <ModuleBanner />
+              <div className="link-drop-center">
+                <h2>choose an nft blind box gift link share with friends of tora</h2>
+                <div className="link-drop__box">
+                  <div className="link-drop__content">
+                    <ul className='link-drop__list'>
+                      {/* <li className="link-drop__item" key={a.id}>
+                        <ShareableCircle
+                          activeLinkForShare={activeIndex}
+                          onClick={handleCircleClick}
+                          index={0}
+                        />
+                        <div className="link-drop__inputs">
+                          <ShareableLink link={a.link} />
+                          <ShareableInput
+                            text={a.text}
+                            index={0}
+                            onBlur={handleBlur}
+                          />
+                        </div>
+                      </li>
+                      <li className="link-drop__item" key={a.id}>
+                        <ShareableCircle
+                          activeLinkForShare={activeIndex}
+                          onClick={handleCircleClick}
+                          index={1}
+                        />
+                        <div className="link-drop__inputs">
+                          <ShareableLink link={a.link} />
+                          <ShareableInput
+                            text={a.text}
+                            index={1}
+                            onBlur={handleBlur}
+                          />
+                        </div>
+                      </li> */}
+                      {linkDropArray.map((item, index) => (
+                        <li className="link-drop__item" key={item.id}>
+                        <ShareableCircle
+                          activeLinkForShare={activeIndex}
+                          onClick={handleCircleClick}
+                          index={index}
+                        />
+                        <div className="link-drop__inputs">
+                          <ShareableLink link={item.link} />
+                          <ShareableInput
+                            text={item.text}
+                            index={index}
+                            onBlur={handleBlur}
+                          />
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                    <div className="link-drop__save">
+                      <SaveBtn linkDropArray={linkDropArray} />
                     </div>
-                  </li>
-                </ul>
-                <div className="link-drop__save">
-                  <SaveBtn linkDropArray={linkDropArray} />
+                    <ShareSocialLinks
+                      color="red"
+                      className="link-drop__share-links"
+                      text={linkDropArray[activeIndex]?.text}
+                      link={linkDropArray[activeIndex]?.link}
+                      onClick={handleShareSocialLinks}
+                    />
+                  </div>
+                  <Image src="https://tora-assets.oss-cn-hongkong.aliyuncs.com/images/bannerTiger/banner@1x.png" preview={false} />
                 </div>
-                {/* <ShareSocialLinks
-                  color="blue"
-                  className="link-drop__share-links"
-                  text={linkDropArray[activeIndex]?.text}
-                  link={linkDropArray[activeIndex]?.link}
-                  onClick={handleShareSocialLinks}
-                /> */}
               </div>
             </div>
+            <div className="generate">
+              <GenerateBtn />
+            </div>
+
           </div>
         </div>
         ) : (

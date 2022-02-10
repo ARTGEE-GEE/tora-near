@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Image } from 'antd';
+import { Image, Skeleton } from 'antd';
 import Reveal from '../../views/MYNFTS/Reveal'
 
-const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
+const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
   const [reveal, setReveal] = useState(isReveal);
   const [info, setInfo] = useState({});
 
@@ -26,9 +26,9 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs }) => {
       {
         reveal ? (
           <>
-            <Image src={`${urlIpfs}/${item.media}`} placeholder={true} />
+            <Image src={`${urlIpfs}/${item.media}`} placeholder={<><Skeleton.Image /></>} preview={!navType} />
             <div className="item">
-              <div className="title"><span>#{item?.title?.padStart(4, '0')}</span> | <span>S-1-1</span></div>
+              <div className="title"><span>#{item?.title?.padStart(5, '0')}</span> | <span>S-1-1</span></div>
             </div>
           </>
         ) : (
