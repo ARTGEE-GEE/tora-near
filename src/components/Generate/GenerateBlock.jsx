@@ -30,9 +30,9 @@ export const GenerateBtn = ({soldOut}) => {
     <>{
       !soldOut ? (
         <ul className="generate-btn w">
-        <BuyMore className="join"/>
-        <BuyMore className="gift-links" isLinkDrop={true} />
-        <li className="send-NFT"><BuyMoreBtn onClick={modalOpen} text="Send NFT">Send NFT</BuyMoreBtn></li>
+          <BuyMore className="join"/>
+          <BuyMore className="gift-links" isLinkDrop={true} />
+          <li className="send-NFT"><BuyMoreBtn onClick={modalOpen} text="Send NFT">Send NFT</BuyMoreBtn></li>
       </ul>
       ):(
         <GenerateSoldOut />

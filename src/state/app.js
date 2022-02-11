@@ -5,7 +5,7 @@ const initialState = {
   app: {
     soldOut: true,
     oneCount: 1,
-    manyCount: 10,
+    manyCount: 3,
     revealMisfits: JSON.parse(localStorage.getItem('revealMisfits')) || {},
     misfitsArray: [],
     linkDropArray: [],
@@ -18,7 +18,7 @@ const initialState = {
   },
   price: {
     oneNFT: 5,
-    manyNFTS: 50,
+    manyNFTS: 15,
     tokenStorageFormat: 0,
     discountFormat: 0,
   },

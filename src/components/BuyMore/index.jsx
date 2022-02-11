@@ -21,6 +21,9 @@ const BuyMore = ({ isLinkDrop, className }) => {
 
   const { price, app } = state;
   const moreThenManyCount = app.tokensLeft >= app.manyCount;
+  console.log(app, 'app')
+  console.log(price, 'price')
+
   handleNumberClick(1)
   return (
     <li className={className}>
@@ -32,7 +35,7 @@ const BuyMore = ({ isLinkDrop, className }) => {
       }
       <Radio.Group value={num} onChange={e => numChange(e)}>
         <Radio value={1}>{formatPrice(price.oneNFT)}</Radio>
-        {!isLinkDrop && moreThenManyCount && <Radio value={10}>{formatPrice(price.manyNFTS)}</Radio>}
+        {!isLinkDrop && moreThenManyCount && <Radio value={3}>{formatPrice(price.manyNFTS)}</Radio>}
       </Radio.Group>
     </li>
   )
