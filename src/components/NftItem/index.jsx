@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Image, Skeleton,Spin  } from 'antd';
+import { Image, Skeleton, Spin  } from 'antd';
 import Reveal from '../../views/MYNFTS/Reveal'
 
 const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
@@ -27,6 +27,8 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
         reveal ? (
           <>
             <Image src={`${urlIpfs}/${item.media}`} placeholder={<Skeleton.Image />} preview={!navType} />
+            {/* <Image src={`${urlIpfs}/${item.media}`} placeholder={<Spin />} preview={!navType} /> */}
+            {/* <Spin /> */}
             <div className="item">
               <div className="title"><span>#{item?.title?.padStart(5, '0')}</span> | <span>S-1-1</span></div>
             </div>
