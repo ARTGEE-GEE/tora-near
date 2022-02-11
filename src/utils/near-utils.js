@@ -48,7 +48,7 @@ export const getPrice = async (near) => {
   });
 
   let minter = "aa.near"
-  console.log(contract,'contract')
+
   let [discount, tenTokenCost, tokenStorage, oneTokenCost, costLinkDrop] = await Promise.all([
     contract.discount({
       num: 10,

@@ -48,7 +48,7 @@ const Modal = () => {
     if (!correctNft) {
       // you can send only that NFTs that you have.
       // you can't send empty data
-      console.log(app.misfitsArray, 'correctNft')
+      console.log(nft, 'correctNft')
       if (
         data.nft === null ||
         data.nft === undefined ||
@@ -58,14 +58,13 @@ const Modal = () => {
         !app.misfitsArray.some((item) => item.token_id == nft)
         )
         return;
-
       setCorrectNft(true);
     } else {
       // can't send to itself
       // account name must contain ".near"
       if (data.account === account.accountId || !data.account.includes('.near'))
         return;
-
+        
       nftTransfer(nft, data.account);
     }
   };

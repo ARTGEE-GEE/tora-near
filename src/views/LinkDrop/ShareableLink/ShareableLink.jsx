@@ -21,6 +21,7 @@ const ShareableLink = ({ link }) => {
       <p className="shareable-link__text">{link} </p>
       {/* <ReactSVG className="shareable-link__icon" src={copyIcon} /> */}
       <p className={`shareable-link__copied ${animation}`}>copied</p>
+      <i className="iconfont">&#xe636;</i>
     </button>
   );
 };

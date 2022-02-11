@@ -3,7 +3,7 @@ import { appStore } from '../../state/app';
 import { useLocation } from 'react-router-dom';
 import BuyMoreBtn from '../BuyMoreBtn';
 import BuyMore from '../BuyMore';
-
+import GenerateSoldOut from './GenerateSoldOut';
 const GenerateBlock = () => {
   const { pathname } = useLocation();
   return(
@@ -15,15 +15,24 @@ const GenerateBlock = () => {
   )
 }
 
-export const GenerateBtn = () => {
+export const GenerateBtn = ({soldOut}) => {
   const { update } = useContext(appStore);
   const modalOpen = () => update('app.modalOpen', true);
   return (
-    <ul className="generate-btn w">
+    <>{
+      soldOut ? (
+      <ul className="generate-btn w">
         <BuyMore className="join"/>
         <BuyMore className="gift-links" isLinkDrop={true} />
         <li className="send-NFT"><BuyMoreBtn onClick={modalOpen} text="Send NFT">Send NFT</BuyMoreBtn></li>
       </ul>
+      ):(
+        <GenerateSoldOut />
+      )
+
+    }
+    
+    </>
   )
 }
 

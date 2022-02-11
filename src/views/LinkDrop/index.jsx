@@ -71,7 +71,7 @@ const LinkDrop = () => {
     <>
       <Nav position="fixed" navType={ navType }/>
       {
-        localStorage.undefined_wallet_auth_key ? (
+        (localStorage.undefined_wallet_auth_key && linkDropArray.length) ? (
           <div className="link-drop">
           <div className="content">
             <div className="banner">
@@ -147,7 +147,6 @@ const LinkDrop = () => {
             <div className="generate">
               <GenerateBtn />
             </div>
-
           </div>
         </div>
         ) : (

@@ -32,8 +32,6 @@ export const initNear =
   async ({ update, getState }) => {
     try {
       const { near, wallet } = await getWallet();
-  
-      console.log(near,'near')
       const price = await getPrice(near);
       
       wallet.signIn = (successUrl) => {
@@ -120,16 +118,16 @@ export const initNear =
         await update('', { app });
 
         // Debugging start
-        console.log('tokens_left:', tokensLeft);
-        console.log('nft_total_supply', nftTotalSupply);
-        console.log('state:', getState());
+        // console.log('tokens_left:', tokensLeft);
+        // console.log('nft_total_supply', nftTotalSupply);
+        // console.log('state:', getState());
         // Debugging end
 
         return;
       }
 
       await update('', { near, wallet, account, price });
-      console.log('state:', getState());
+      // console.log('state:', getState());
     } catch (e) {
       console.log('error:', e);
     }

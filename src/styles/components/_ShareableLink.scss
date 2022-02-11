@@ -1,8 +1,9 @@
 $secondary-color: #000;
 $blue-color: #b85a5f;
+
 .shareable-link {
   // width: 279px;
-  padding: 19px 0 19px 22px;
+  padding: 19px 10px 19px 22px;
   background-color: $white;
   font-size: 14px;
   line-height: 19px;
@@ -14,7 +15,9 @@ $blue-color: #b85a5f;
   gap: 8px;
   position: relative;
   border: 1px solid #C7C7C7;
-
+  i {
+    font-size: 18px;
+  }
   &__text {
     overflow: hidden;
     white-space: nowrap;

@@ -5,7 +5,7 @@ import { AppProvider } from './state/app';
 import './styles/index.scss'
 // import './styles/base.scss'
 // import './styles/font.scss'
-import './assets/iconfonts/iconfont.css'
+// import './assets/iconfonts/iconfont.css'
 // import './styles/common.scss'
 
 import Default from './layouts/default'

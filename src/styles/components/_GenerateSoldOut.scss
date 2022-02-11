@@ -1,0 +1,64 @@
+.generate-sold-out {
+  width: calc(100% - 600px);
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-family: BebasKai;
+    color: #000000;
+    line-height: 25px;
+    // margin: 51px 0 19px 0;
+  }
+  .generate-btn {
+    width: 100%;
+    .generate-sold-out__link {
+      display: block;
+      width: 246px;
+      height: 57px;
+      background: #9F353A;
+      font-size: 14px;
+      font-family: AkiraExpanded-SuperBold, AkiraExpanded;
+      font-weight: normal;
+      color: #FFFFFF;
+      position: relative;
+      z-index: 30;
+
+      &:hover {
+        background: #80282c;
+      }
+    }
+  }
+}
+@media all and (max-width: 769px) {
+  .generate-sold-out {
+    width: calc(100% - .4rem);
+    h2 {
+      font-size: .4rem;
+      line-height: .4rem;
+      margin: .4rem 0 0 0;
+    }
+    .generate-btn {
+      justify-content: space-between;
+      .generate-sold-out__link, .buy-more-btn  {
+        font-size: .12rem;
+        width: 1.58rem;
+        height: .4rem;
+        line-height: .4rem;
+      }
+
+
+    }
+  }
+}
+
+@media all and (min-width: 769px) {
+  .generate-sold-out {
+    width: calc(100% - 200px);
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .generate-sold-out {
+    width: calc(100% - 500px);
+  }
+}

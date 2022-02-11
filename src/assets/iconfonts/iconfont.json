@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2325910",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
       "icon_id": "1029233",
       "name": "叉叉",
       "font_class": "cancel-1-copy",
