@@ -32,7 +32,7 @@ const BuyMore = ({ isLinkDrop, className }) => {
       }
       <Radio.Group value={num} onChange={e => numChange(e)}>
         <Radio value={1}>{formatPrice(price.oneNFT)}</Radio>
-        {!isLinkDrop && !moreThenManyCount && <Radio value={10}>{formatPrice(price.manyNFTS)}</Radio>}
+        {!isLinkDrop && moreThenManyCount && <Radio value={10}>{formatPrice(price.manyNFTS)}</Radio>}
       </Radio.Group>
     </li>
   )
