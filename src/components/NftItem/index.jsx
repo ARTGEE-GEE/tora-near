@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Image, Skeleton, Spin  } from 'antd';
+import { Image } from 'antd';
 import Reveal from '../../views/MYNFTS/Reveal'
 
 const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {

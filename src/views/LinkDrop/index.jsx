@@ -67,6 +67,8 @@ const LinkDrop = () => {
     const copyText = `${activeText}  ${activeLink}`;
     handleCopy(copyText);
   };
+
+  console.log(linkDropArray, 'linkDropArray')
   return (
     <>
       <Nav position="fixed" navType={ navType }/>
