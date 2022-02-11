@@ -33,6 +33,37 @@
               display: flex;
               justify-content: left;
               align-items: center;
+              &:nth-of-type(1) {
+                .shareable-link, .link-drop-shareable-input {
+
+                  &::before {
+                    position: absolute;
+                    top: -27px;
+                    left: 0;
+                    font-size: 12px;
+                    font-family: SourceHanSansCN-Light, SourceHanSansCN;
+                    font-weight: 300;
+                    color: #9F353A;
+                    line-height: 18px;
+
+                  }
+
+                }
+                .shareable-link {
+                  &::before {
+                    content: 'Shareable links';
+                  }
+
+                }
+                .link-drop-shareable-input {
+                  position: relative;
+                  // background: #000;
+                  &::before {
+                    content: 'Who did i share this link with?';
+                    
+                  }
+                }
+              }
               &:nth-of-type(n+2){
                 margin-top: 30px;
               }
@@ -41,6 +72,7 @@
                 justify-self: left;
                 .shareable-link {
                   margin-right: 10px;
+                  
                 }
               }
             }
@@ -91,16 +123,45 @@
                 align-items: baseline;
                 justify-content: space-between;
                 margin-top: .2rem;
+                &:nth-of-type(1) {
+                  .shareable-link, .link-drop-shareable-input {
+  
+                    &::before {
+                      top: -0.2rem;
+                      left: 0;
+                      font-size: .12rem;
+                      line-height: .18rem;
+                    }
+  
+                  }
+                  .shareable-link {
+                    position: relative;
+                    &::before {
+                      content: 'Shareable links';
+                    }
+  
+                  }
+                  .link-drop-shareable-input {
+                    margin-top: .3rem!important;
+                    position: relative;
+                    &::before {
+                      content: 'Who did i share this link with?';
+                      
+                    }
+                  }
+                }
                 .link-drop__inputs {
                   flex-direction: column;
                   .shareable-link, .shareable-input {
                     margin-right: 0;
                     width: 2.48rem;
-                    padding: .13rem 0 .12rem .15rem;
+                    padding: .13rem .05rem .12rem .15rem;
                   }
-                  .shareable-input {
+                  .link-drop-shareable-input {
                     margin-top: .1rem;
                   }
+
+
                 }
                 .shareable-circle {
                   margin-right: .1rem;
@@ -128,6 +189,9 @@
   .link-drop {
     .link-drop-center {
       padding-bottom: 40px;
+      h2 {
+        margin-bottom: 40px;
+      }
       .ant-image {
         display: none;
       }
@@ -139,6 +203,9 @@
     
     .link-drop-center {
       padding-bottom:0;
+      h2 {
+        margin-bottom: 40px;
+      }
       .link-drop__content {
         padding-left: 20px;
       }

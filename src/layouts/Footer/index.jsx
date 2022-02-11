@@ -8,7 +8,7 @@ function Footer(props) {
     {navType && <div className="footerHeader">
       <NavLink to="/"><h1 className="logo">TORA</h1></NavLink>
       <ul>
-        <li><a href="https://opensea.io/collection/toracity" target="_blank" rel="noopener noreferrer">{null}</a></li>
+        {/* <li><a href="https://opensea.io/collection/toracity" target="_blank" rel="noopener noreferrer">{null}</a></li> */}
         <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank" rel="noopener noreferrer">{null}</a></li>
         <li><a href="https://twitter.com/_ProjectTora_" target="_blank" rel="noopener noreferrer">{null}</a></li>
       </ul>

@@ -4,18 +4,19 @@ $black: #000;
 .shareable-circle {
   width: 20px;
   height: 20px;
-  background: $white;
-  border: 1px solid $blue-color;
   border-radius: 50%;
+  border: 2px solid $white;
   outline: 1px solid $blue-color;
   min-width: 20px;
   min-height: 20px;
+  background-color: $white;
   margin-right: 30px;
   transition: all 0.3s ease-in-out;
 
+
   &__active {
     background-color:$blue-color;
-    border-color: $black;
-    outline: 1px solid $black;
+    // border-color: $black;
+    // outline: 1px solid $white;
   }
 }

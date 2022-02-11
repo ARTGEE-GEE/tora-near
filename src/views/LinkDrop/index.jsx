@@ -18,7 +18,7 @@ const LinkDrop = () => {
   const [ navType, setNavType ] = useState(false)
   const { width } = useViewport();
   useEffect(() => {
-    setNavType(width < 1220 ? true : false)
+    setNavType(width < 1325 ? true : false)
   },[width])
   const { state, update } = useContext(appStore);
   const { app, account } = state;
@@ -83,36 +83,6 @@ const LinkDrop = () => {
                 <div className="link-drop__box">
                   <div className="link-drop__content">
                     <ul className='link-drop__list'>
-                      {/* <li className="link-drop__item" key={a.id}>
-                        <ShareableCircle
-                          activeLinkForShare={activeIndex}
-                          onClick={handleCircleClick}
-                          index={0}
-                        />
-                        <div className="link-drop__inputs">
-                          <ShareableLink link={a.link} />
-                          <ShareableInput
-                            text={a.text}
-                            index={0}
-                            onBlur={handleBlur}
-                          />
-                        </div>
-                      </li>
-                      <li className="link-drop__item" key={a.id}>
-                        <ShareableCircle
-                          activeLinkForShare={activeIndex}
-                          onClick={handleCircleClick}
-                          index={1}
-                        />
-                        <div className="link-drop__inputs">
-                          <ShareableLink link={a.link} />
-                          <ShareableInput
-                            text={a.text}
-                            index={1}
-                            onBlur={handleBlur}
-                          />
-                        </div>
-                      </li> */}
                       {linkDropArray.map((item, index) => (
                         <li className="link-drop__item" key={item.id}>
                         <ShareableCircle
@@ -122,11 +92,14 @@ const LinkDrop = () => {
                         />
                         <div className="link-drop__inputs">
                           <ShareableLink link={item.link} />
-                          <ShareableInput
-                            text={item.text}
-                            index={index}
-                            onBlur={handleBlur}
-                          />
+                          <div className="link-drop-shareable-input">
+                            <ShareableInput
+                              text={item.text}
+                              index={index}
+                              onBlur={handleBlur}
+                            />
+
+                          </div>
                         </div>
                       </li>
                       ))}
