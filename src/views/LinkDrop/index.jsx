@@ -22,9 +22,9 @@ const LinkDrop = () => {
   },[width])
   const { state, update } = useContext(appStore);
   const { app, account } = state;
+  const { soldOut } = app;
 
   const [linkDropArray, setLinkDropArray] = useState([...app.linkDropArray]);
-  console.log(linkDropArray.length)
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -145,7 +145,7 @@ const LinkDrop = () => {
               </div>
             </div>
             <div className="generate">
-              <GenerateBtn />
+              <GenerateBtn soldOut={soldOut}  />
             </div>
           </div>
         </div>

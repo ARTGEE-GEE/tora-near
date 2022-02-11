@@ -9,7 +9,8 @@ import { formatAccountIdCenter } from '../../utils/near-utils'
 function NoNfts() {
   
   const { state } = useContext(appStore);
-  const { wallet, account } = state;
+  const { wallet, account, app } = state;
+  const { soldOut } = app;
   return (
     <div className="no-nfts">
       <div className="content">
@@ -25,7 +26,7 @@ function NoNfts() {
             <ConnectWalletBtn handleClick={() => wallet.signIn()} />
           )}
         </div>
-        <Generate />
+        <Generate  />
       </div>
   </div>
   )

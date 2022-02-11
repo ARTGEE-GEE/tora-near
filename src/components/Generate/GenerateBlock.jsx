@@ -6,11 +6,17 @@ import BuyMore from '../BuyMore';
 import GenerateSoldOut from './GenerateSoldOut';
 const GenerateBlock = () => {
   const { pathname } = useLocation();
+  const { state } = useContext(appStore);
+  const { soldOut } = state.app;
   return(
     <div className="generate">
-      <h2>You don't have a <span>{pathname === '/link-drop' ? 'LinkDrops' : 'NFT'}</span> yet</h2>
-      <div className='btn-buy-more'>Click “<span>{pathname === '/link-drop' ? 'Generate gift Links' : 'Buy more'}</span>” to buy</div>
-      <GenerateBtn /> 
+      {
+        soldOut && <>
+          <h2>You don't have a <span>{pathname === '/link-drop' ? 'LinkDrops' : 'NFT'}</span> yet</h2>
+          <div className='btn-buy-more'>Click “<span>{pathname === '/link-drop' ? 'Generate gift Links' : 'Buy more'}</span>” to buy</div>
+        </>
+      }
+      <GenerateBtn soldOut={soldOut} /> 
   </div>
   )
 }

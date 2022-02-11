@@ -18,7 +18,6 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
   }, []);
   const handleClick = () => {
     setReveal(true);
-    console.log(item.title, 'item.title')
     onClick({ [item.title]: true });
   };
   
