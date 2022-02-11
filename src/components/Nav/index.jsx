@@ -15,7 +15,7 @@ function Nav(props) {
 
   const menuClick = () => {
     setMenuType(!menuType)
-    setMenuHeight(menuType ? menuItem1.current.clientHeight + menuItem2.current.clientHeight + 40 + 'px' : '0')
+    setMenuHeight(menuType ? menuItem1.current.clientHeight + menuItem2.current.clientHeight + (localStorage.undefined_wallet_auth_key ? 40 : 0) + 'px' : '0')
   }
   
   const { state } = useContext(appStore);
@@ -25,12 +25,12 @@ function Nav(props) {
     <div className="w">
       <a href={'https://tora.city/'} style={{cursor:'pointer'}}><h1 className="logo">TORA</h1></a>
       {!navType && <>
-        <ul className="nav-social">
+        <ul className="nav-social" style={{right: localStorage.undefined_wallet_auth_key ? '200px' : '0'}}>
         {/* <li><a href="https://opensea.io/collection/toracity" target="_blank" rel="noreferrer">opensea</a></li> */}
         <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank" rel="noreferrer">discord</a></li>
         <li><a href="https://twitter.com/_ProjectTora_" target="_blank" rel="noreferrer">twitter</a></li>
       </ul>
-      <ul className="nav-tabs">
+      <ul className="nav-tabs"  style={{right: localStorage.undefined_wallet_auth_key ? '295px' : '90px'}}>
         {
           navData.map((value,index) => <li key={index}><a href={`https://tora.city/#${value.name}`}>{ value.name }</a></li>)
         }
@@ -43,7 +43,7 @@ function Nav(props) {
           handleClick={() => wallet.signOut()}
           logOut={ true }
         />
-        )}
+      )}
       </>}
       {
         navType && <div className="menu" onClick={() => menuClick()}>
@@ -65,14 +65,13 @@ function Nav(props) {
         <li><a href="https://discord.com/invite/Ppx3FHuCw7" target="_blank" rel="noreferrer">discord</a></li>
         <li><a href="https://twitter.com/_ProjectTora_" target="_blank" rel="noreferrer">twitter</a></li>
         {account?.accountId && (
-        <ConnectWalletBtn
-          text={formatAccountIdCenter(account.accountId)}
-          handleClick={() => wallet.signOut()}
-          logOut={ true }
-        />
+          <ConnectWalletBtn
+            text={formatAccountIdCenter(account.accountId)}
+            handleClick={() => {wallet.signOut();menuClick()}}
+            logOut={ true }
+          />
         )}
       </ul>
-      
     </div>}
   </div>
   )

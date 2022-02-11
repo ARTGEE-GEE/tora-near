@@ -31,7 +31,7 @@ const MYNFTS = () => {
     <div className="MYNFTS">
       <Nav position="fixed" navType={ navType }/>
       <ModuleBanner />
-      {nftsCount ? (<div className="my-nft-content">
+      {localStorage.undefined_wallet_auth_key ? (<div className="my-nft-content">
           <NFTList navType={navType}/>
           <div className="generate">
             <GenerateBtn />

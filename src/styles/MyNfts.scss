@@ -1,12 +1,13 @@
 .MYNFTS {
   .my-nft-content {
-    // padding: 99px 0;
     background: #EDEEF5;
   }
 }
 @media all and (max-width: 769px) {
   .MYNFTS {
-    padding-top: .59rem;
+    .my-nft-content {
+      padding-top: .59rem;
+    }
   }
   .ModuleBanner {
     display: block!important;
@@ -14,17 +15,19 @@
 }
 @media all and (min-width: 769px) {
   .MYNFTS {
-    padding-top: 99px;
     .my-nft-content {
-      background: #EDEEF5;
+      padding-top: 99px;
+     
     }
     
   }
 }
 @media all and (min-width: 1025px) {
   .MYNFTS {
-    padding-top: 99px;
+    .my-nft-content {
+      padding-top: 99px;
 
+    }
   }
 }
 
