@@ -21,8 +21,6 @@ const BuyMore = ({ isLinkDrop, className }) => {
 
   const { price, app } = state;
   const moreThenManyCount = app.tokensLeft >= app.manyCount;
-  console.log(app, 'app')
-  console.log(price, 'price')
 
   handleNumberClick(1)
   return (

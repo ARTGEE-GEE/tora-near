@@ -25,7 +25,6 @@ const GenerateBlock = () => {
 export const GenerateBtn = ({soldOut}) => {
   const { update } = useContext(appStore);
   const modalOpen = () => update('app.modalOpen', true);
-  console.log(soldOut, 'soldOut')
   return (
     <>{
       !soldOut ? (
