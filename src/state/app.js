@@ -17,8 +17,8 @@ const initialState = {
     initialized: false,
   },
   price: {
-    oneNFT: 5,
-    manyNFTS: 15,
+    oneNFT: 6.5,
+    manyNFTS: 19.5,
     tokenStorageFormat: 0,
     discountFormat: 0,
   },

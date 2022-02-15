@@ -51,10 +51,10 @@ export const getPrice = async (near) => {
 
   let [discount, tenTokenCost, tokenStorage, oneTokenCost, costLinkDrop] = await Promise.all([
     contract.discount({
-      num: 10,
+      num: 3,
       minter
     }),
-    contract.total_cost({ num: 10, minter}),
+    contract.total_cost({ num: 3, minter}),
     contract.token_storage_cost(),
     contract.cost_per_token({ num: 1, minter}),
     contract.cost_of_linkdrop({minter}),
@@ -77,13 +77,12 @@ export const getPrice = async (near) => {
 
   const price = {
     oneNFT: oneTokenFormat - tokenStorageFormat,
-    manyNFTS: tenTokenFormat - 10 * tokenStorageFormat,
+    manyNFTS: tenTokenFormat - 3 * tokenStorageFormat,
     tokenStorageFormat,
     discountFormat,
     tenTokenCost,
     oneTokenCost,
     costLinkDrop: costLinkDrop,
   };
-
   return price;
 };

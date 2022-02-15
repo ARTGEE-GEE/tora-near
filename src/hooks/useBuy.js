@@ -24,7 +24,6 @@ const useBuy = (isLinkDrop) => {
   }, [showMessage]);
 
   const handleClick = async () => {
-    console.log(count,'---0000')
     if (!count) {
       setShowMessage(true);
     } else {
