@@ -15,7 +15,7 @@ function Nav(props) {
 
   const menuClick = () => {
     setMenuType(!menuType)
-    setMenuHeight(menuType ? menuItem1.current.clientHeight + menuItem2.current.clientHeight + (localStorage.undefined_wallet_auth_key ? 40 : 0) + 'px' : '0')
+    setMenuHeight(menuType ? menuItem1.current.clientHeight + menuItem2.current.clientHeight + (localStorage.undefined_wallet_auth_key ? 40 : 15) + 'px' : '0')
   }
   
   const { state } = useContext(appStore);
