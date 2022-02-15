@@ -8,8 +8,9 @@ import { Radio } from 'antd'
 const BuyMore = ({ isLinkDrop, className }) => {
   const [ num, setNum] = useState(1)
   const numChange = e => {
-    setNum(e.target.value)
+    console.log(e.target.value, '-0-')
     handleNumberClick(e.target.value)
+    setNum(e.target.value)
   }
   const {
     text,
@@ -21,8 +22,7 @@ const BuyMore = ({ isLinkDrop, className }) => {
 
   const { price, app } = state;
   const moreThenManyCount = app.tokensLeft >= app.manyCount;
-
-  handleNumberClick(1)
+  console.log('abc')
   return (
     <li className={className}>
       <BuyMoreBtn onClick={handleClick} text={text}/>

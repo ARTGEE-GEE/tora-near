@@ -11,7 +11,7 @@ const useBuy = (isLinkDrop) => {
 
   const text = isLinkDrop ? 'Generate gift links' : 'Buy more';
 
-  const [count, setCount] = useState();
+  const [count, setCount] = useState(1);
   const [showMessage, setShowMessage] = useState(false);
   const [showCountAnimation, setShowCountAnimation] = useState('');
   useEffect(() => {

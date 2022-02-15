@@ -27,7 +27,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
           <ReactSVG className={colorIcon} src={twitter} />
         </a>
       </li>
-      <li>
+      {/* <li>
         <a
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${link}`}
           target="_blank"
@@ -36,7 +36,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
         >
           <ReactSVG className={colorIcon} src={linkedIn} />
         </a>
-      </li>
+      </li> */}
       <li>
         <a
           href="https://www.instagram.com/direct/inbox/"
@@ -49,7 +49,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
         </a>
       </li>
 
-      <li>
+      {/* <li>
         <a
           href={`mailto:?body=${text}   ${link}`}
           target="_blank"
@@ -57,7 +57,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
         >
           <ReactSVG className={colorIcon} src={email} />
         </a>
-      </li>
+      </li> */}
       <li>
         <a
           href={`https://www.facebook.com/sharer/sharer.php?u=${link}&quote=${text}`}
