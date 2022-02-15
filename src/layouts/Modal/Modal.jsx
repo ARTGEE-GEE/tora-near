@@ -62,7 +62,7 @@ const Modal = () => {
     } else {
       // can't send to itself
       // account name must contain ".near"
-      if (data.account === account.accountId || !data.account.includes('.near'))
+      if (data.account === account.accountId || !data.account.includes('.testnet'))
         return;
         
       nftTransfer(nft, data.account);
