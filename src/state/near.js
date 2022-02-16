@@ -110,7 +110,6 @@ export const initNear =
             account_id: account.accountId,
           })) ?? state.app.manyCount;
 
-        console.log(manyCount);
         const app = {
           ...state.app,
           misfitsArray,
