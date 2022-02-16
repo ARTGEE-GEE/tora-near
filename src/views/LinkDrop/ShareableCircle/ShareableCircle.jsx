@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ShareableCircle = ({ activeLinkForShare, index, onClick }) => (
   <button
     type="button"
-    onClick={() => {console.log(activeLinkForShare); console.log(index) ;onClick(index)}}
+    onClick={() => {onClick(index)}}
     className={`shareable-circle ${
       index === activeLinkForShare ? 'shareable-circle__active' : ''
     }`}

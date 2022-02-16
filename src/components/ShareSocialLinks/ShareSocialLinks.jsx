@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import twitter from '../../assets/images/share-social/twitter.svg';
-import linkedIn from '../../assets/images/share-social/linkedin.svg';
+// import linkedIn from '../../assets/images/share-social/linkedin.svg';
 import instagram from '../../assets/images/share-social/instagram.svg';
-import email from '../../assets/images/share-social/email.svg';
+// import email from '../../assets/images/share-social/email.svg';
 import facebook from '../../assets/images/share-social/facebook.svg';
-import wechat from '../../assets/images/share-social/wechat.svg';
+// import wechat from '../../assets/images/share-social/wechat.svg';
 import telegram from '../../assets/images/share-social/telegram.svg';
 import discord from '../../assets/images/share-social/discord.svg';
 
@@ -67,7 +67,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
           <ReactSVG className={colorIcon} src={facebook} />
         </a>
       </li>
-      <li>
+      {/* <li>
         <a
           href="weixin://"
           target="_blank"
@@ -77,7 +77,7 @@ const ShareSocialLinks = ({ className, color, text, link, onClick }) => {
         >
           <ReactSVG className={colorIcon} src={wechat} />
         </a>
-      </li>
+      </li> */}
       <li>
         <a
           href={`https://telegram.me/share/?text=${text}&url=${link}`}

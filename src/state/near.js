@@ -95,10 +95,9 @@ export const initNear =
 
         // if all tokens buy soldOut will be true
         const soldOut = tokensLeft === 0;
-
         // filter linkDrops that was used
         linkDropArray = linkDropArray.filter(({ isUsed }) => !isUsed);
-
+        
         // update LocalStorage
         localStorage.setItem(
           `linkDropArray:${account.accountId}`,

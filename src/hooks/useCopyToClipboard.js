@@ -10,7 +10,6 @@ const useCopyToClipboard = () => {
     document.execCommand('copy');
     document.body.removeChild(el);
   };
-
   return { handleCopy };
 };
 

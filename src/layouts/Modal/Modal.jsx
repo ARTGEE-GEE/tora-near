@@ -89,7 +89,7 @@ const Modal = () => {
         ) : (
           <>
             <div className="modal__nft-id">
-              Account <span className="modal__nft-id-white">name</span>
+              Account
             </div>
             <input
               name="account"

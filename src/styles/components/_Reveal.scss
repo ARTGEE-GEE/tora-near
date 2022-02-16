@@ -10,26 +10,8 @@
   }
   .reveal__top {
     position: relative;
-    .reveal__image {
+    .ant-image {
       width: 100%;
-    }
-    .reveal__question-sign {
-      font-size: 130px;
-
-    }
-
-    .reveal__text-hover {
-      font-size: 40px;
-      font-family: BebasKai, serif;
-      display: none;
-    }
-    .reveal__question-sign, .reveal__text-hover {
-      color: #9F353A;
-      font-weight: 800;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
   }
   .item {
@@ -42,6 +24,7 @@
       line-height: 16px;
       text-align: center;
       vertical-align: middle;
+      margin-left: 3px;
     }
   }
 }
