@@ -8571,6 +8571,10 @@ tempy@^0.6.0:
     type-fest "^0.16.0"
     unique-string "^2.0.0"
 
+"tenk-nft@git+https://github.com/tenk-dao/tenk#release/tora":
+  version "0.1.0"
+  resolved "git+https://github.com/tenk-dao/tenk#da5d24d6c925d7ae80accd4792244e8bec1f8901"
+
 terminal-link@^2.0.0:
   version "2.1.1"
   resolved "https://registry.npmmirror.com/terminal-link/download/terminal-link-2.1.1.tgz#14a64a27ab3c0df933ea546fba55f2d078edc994"

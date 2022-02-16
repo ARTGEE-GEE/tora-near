@@ -1,6 +1,7 @@
 /* eslint-disable */
 import * as nearAPI from 'near-api-js';
 import getConfig from '../config';
+import {Contract} from 'tenk-nft';
 
 export const { networkId, nodeUrl, walletUrl, contractName, contractMethods } =
   getConfig();
@@ -35,17 +36,12 @@ export const getWallet = async () => {
   return { near, wallet };
 };
 
-export const getContract = (account, methods = contractMethods) => {
-  return new nearAPI.Contract(account, contractName, {
-    ...methods,
-    sender: account.accountId,
-  });
+export const getContract = (account) => {
+  return new Contract(account, contractName);
 };
 
-export const getPrice = async (near) => {
-  const contract = await near.loadContract(contractName, {
-    ...contractMethods,
-  });
+export const getPrice = async (account) => {
+  const contract = new Contract(account,contractName);
 
   let minter = "aa.near"
 
