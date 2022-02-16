@@ -30,7 +30,7 @@ const BuyMoreBtn = ({ className, text, onClick }) => {
       </button>
       <div className={`isBuy`} style={{display: dis}}>
           <div className="isBuy-box">
-            <h4>inform</h4>
+            <h4>Notice</h4>
             <p>You have exceeded your purchase limit!</p>
             <button onClick={() => setDis('none')}>OK</button>
           </div>
