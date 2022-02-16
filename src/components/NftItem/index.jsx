@@ -20,7 +20,6 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
     setReveal(true);
     onClick({ [item.title]: true });
   };
-
   
   return (
     <div className="NftItem">

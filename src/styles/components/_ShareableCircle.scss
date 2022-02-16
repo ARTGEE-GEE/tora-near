@@ -7,6 +7,7 @@ $black: #000;
   border-radius: 50%;
   border: 2px solid $white;
   outline: 1px solid $blue-color;
+  -moz-outline-radius: 50%;
   min-width: 20px;
   min-height: 20px;
   background-color: $white;
