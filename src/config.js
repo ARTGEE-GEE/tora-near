@@ -1,4 +1,4 @@
-const contractName = process.env.REACT_APP_CONTRACT_NAME || 'panda.tenk.testnet';
+const contractName = process.env.REACT_APP_CONTRACT_NAME || 'tora.tenk.testnet';
 // const contractName = process.env.REACT_APP_CONTRACT_NAME || 'misfits.tenk.near';
 
 
