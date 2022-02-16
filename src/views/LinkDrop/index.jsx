@@ -75,7 +75,7 @@ const LinkDrop = () => {
           <div className="link-drop">
           <div className="content">
             <div className="banner">
-              <ModuleBanner />
+            {localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
               <div className="link-drop-center">
                 <h2>choose an nft blind box gift link share with friends of tora</h2>
                 <div className="link-drop__box">
