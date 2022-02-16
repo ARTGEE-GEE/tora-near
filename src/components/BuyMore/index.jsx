@@ -24,6 +24,13 @@ const BuyMore = ({ isLinkDrop, className }) => {
 
   const { price, app } = state;
   const moreThenManyCount = app.tokensLeft >= app.manyCount;
+
+  // update CSS variable with correct `app.manyCount`
+  React.useEffect(() => {
+    document.querySelector(':root')
+      .style.setProperty('--many-count', `"${app.manyCount}"`);
+  }, [app.manyCount])
+
   return (
     <li className={className}>
       <BuyMoreBtn onClick={handleClick} text={text} />
