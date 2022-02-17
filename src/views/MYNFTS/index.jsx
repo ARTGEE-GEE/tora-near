@@ -21,7 +21,7 @@ const MYNFTS = () => {
     <div className="MYNFTS">
       <Nav position="fixed" navType={ navType }/>
       <TokenLeft />
-      {!localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
+      {localStorage.undefined_wallet_auth_key && state.app.misfitsArray.length && <ModuleBanner /> }
       {(localStorage.undefined_wallet_auth_key && state.app.misfitsArray.length) ? (<div className="my-nft-content">
           <NFTList navType={navType}/>
           <div className="generate">

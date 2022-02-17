@@ -14,6 +14,7 @@ const Main = () => {
   useEffect(onMount, []);
   const { state } = useContext(appStore);
   const {wallet} = state;
+
   if(!wallet) {
     return <Loader />
   }
