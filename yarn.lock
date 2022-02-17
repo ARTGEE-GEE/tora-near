@@ -6104,10 +6104,10 @@ near-api-js@0.42.0:
     text-encoding-utf-8 "^1.0.2"
     tweetnacl "^1.0.1"
 
-near-units@^0.1.9:
+near-units@0.1.9:
   version "0.1.9"
-  resolved "https://registry.yarnpkg.com/near-units/-/near-units-0.1.9.tgz#4bf07da0b046e08e0b8785ad8e32d4df3a944b93"
-  integrity sha512-xiuBjpNsi+ywiu7P6iWRZdgFm7iCr/cfWlVO6+e5uaAqH4mE1rrurElyrL91llNDSnMwogd9XmlZOw5KbbHNsA==
+  resolved "https://registry.npmmirror.com/near-units/download/near-units-0.1.9.tgz#4bf07da0b046e08e0b8785ad8e32d4df3a944b93"
+  integrity sha1-S/B9oLBG4I4Lh4WtjjLU3zqUS5M=
   dependencies:
     bn.js "^5.2.0"
 
@@ -8570,10 +8570,6 @@ tempy@^0.6.0:
     temp-dir "^2.0.0"
     type-fest "^0.16.0"
     unique-string "^2.0.0"
-
-"tenk-nft@git+https://github.com/tenk-dao/tenk#release/tora":
-  version "0.1.0"
-  resolved "git+https://github.com/tenk-dao/tenk#a003bc2deb719a1c03e4310da10ab6471aefbff7"
 
 terminal-link@^2.0.0:
   version "2.1.1"
