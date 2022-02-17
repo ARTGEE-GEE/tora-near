@@ -1,0 +1,33 @@
+.token-left {
+  position: fixed;
+  right: 0; 
+  top: 100px;
+  z-index: 999;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  
+  overflow: hidden;
+  .token-left-box {
+    background: rgba(255,255,255, .7);
+    padding: 14px;
+    padding-bottom: 13px;
+    p {
+      font-family: AkiraExpanded-SuperBold, AkiraExpanded;
+      color: #9F353A;
+      margin: 0!important;
+      line-height: 14px;
+    }
+  }
+}
+
+@media all and (max-width: 769px) {
+  .token-left{
+    .token-left-box {
+      padding: .1rem
+      p {
+        font-size: .12rem;
+        line-height: .12rem;
+      }
+    }
+  }
+}

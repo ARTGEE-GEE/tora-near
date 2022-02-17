@@ -8,7 +8,7 @@ import { useViewport } from '../../utils/viewportContext'
 import { GenerateBtn } from '../../components/Generate/GenerateBlock';
 import NoNfts from '../NoNfts'
 import ModuleBanner from '../../components/ModuleBanner';
-
+import TokenLeft from '../../components/TokensLeft';
 const MYNFTS = () => {
   const [ navType, setNavType ] = useState(false)
   const { width } = useViewport();
@@ -20,7 +20,8 @@ const MYNFTS = () => {
   return(
     <div className="MYNFTS">
       <Nav position="fixed" navType={ navType }/>
-      {localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
+      <TokenLeft />
+      {!localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
       {(localStorage.undefined_wallet_auth_key && state.app.misfitsArray.length) ? (<div className="my-nft-content">
           <NFTList navType={navType}/>
           <div className="generate">

@@ -4,6 +4,7 @@ import BuyMoreBtn from "../BuyMoreBtn";
 import useBuy from "../../hooks/useBuy";
 import { Radio as AntdRadio } from "antd";
 import { NEAR } from 'near-units';
+import TokenLeft from '../TokensLeft'
 
 const Radio = ({ value, price }) => (
   <AntdRadio value={value}>

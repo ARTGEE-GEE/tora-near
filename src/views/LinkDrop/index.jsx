@@ -13,7 +13,7 @@ import {GenerateBtn} from '../../components/Generate/GenerateBlock'
 import { Image } from 'antd'
 import ShareSocialLinks from '../../components/ShareSocialLinks'
 import ModuleBanner from '../../components/ModuleBanner';
-
+import TokenLeft from '../../components/TokensLeft'
 const LinkDrop = () => {
   const [ navType, setNavType ] = useState(false)
   const { width } = useViewport();
@@ -70,12 +70,13 @@ const LinkDrop = () => {
   return (
     <>
       <Nav position="fixed" navType={ navType }/>
+      <TokenLeft />
       {
         (localStorage.undefined_wallet_auth_key && linkDropArray.length) ? (
           <div className="link-drop">
           <div className="content">
             <div className="banner">
-            {localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
+            {!localStorage.undefined_wallet_auth_key && <ModuleBanner /> }
               <div className="link-drop-center">
                 <h2>choose an nft blind box gift link share with friends of tora</h2>
                 <div className="link-drop__box">
