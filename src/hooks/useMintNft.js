@@ -14,7 +14,7 @@ const useMintNft = () => {
     await contract.nft_mint_many(
       { num: count },
       {
-        gas: Gas.parse("12 Tgas").mul(Gas.from(count)),
+        gas: Gas.parse("30 Tgas").mul(Gas.from(count)),
         attachedDeposit: price.oneNFT.mul(NEAR.from(count)),
         walletCallbackUrl,
       }
