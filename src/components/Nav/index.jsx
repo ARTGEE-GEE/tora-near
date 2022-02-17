@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { appStore } from '../../state/app';
 import ConnectWalletBtn from '../ConnectWalletBtn';
 import { formatAccountIdCenter } from '../../utils/near-utils'
-
+import Loader from '../Loader'
 function Nav(props) {
   const { background ='#1C1C1C', position='static', navType } = props
   const navData = [{name: 'Introduction'}, {name: 'World'}, {name: 'Species'}, {name: 'Tier'}, {name: 'WHITELIST'}, {name: 'Roadmap'}, {name: 'Team'}, {name: 'FAQ'}]
@@ -20,6 +20,9 @@ function Nav(props) {
   
   const { state } = useContext(appStore);
   const { wallet, account } = state;
+
+ 
+
   return (
     <div id="nav" style={{background:background,position:position,top:'0'}}>
     <div className="w">

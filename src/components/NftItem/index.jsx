@@ -34,7 +34,6 @@ const NftItem = ({ item, onClick, isReveal, urlIpfs, navType }) => {
             <div className="item">
               {/* <div className="title"><span>#{item?.title?.padStart(4, '0')}</span> | <span>{item?.rarity || 'f'}</span></div> */}
               <div className="title"><span>#{item?.title?.padStart(4, '0')}</span></div>
-
             </div>
           </>
         ) : (

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { appStore } from '../../state/app';
 import Modal from '../Modal';
 
-
 const Layout = ({ children }) => {
   const { state } = useContext(appStore);
   const { modalOpen } = state.app;
+  
   return (
     <>
       {children}

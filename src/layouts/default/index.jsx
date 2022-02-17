@@ -3,7 +3,7 @@ import { appStore, onAppMount } from '../../state/app';
 import { BrowserRouter } from 'react-router-dom'
 import Router from '../../router'
 import Layout from '../Layout';
-
+import Loader from '../../components/Loader'
 const Main = () => {
   const { dispatch } = useContext(appStore);
 
@@ -12,7 +12,11 @@ const Main = () => {
   };
 
   useEffect(onMount, []);
-
+  const { state } = useContext(appStore);
+  const {wallet} = state;
+  if(!wallet) {
+    return <Loader />
+  }
   return (
     <BrowserRouter>
       <Layout>
