@@ -48,7 +48,7 @@ export const getPrice = async (account) => {
   const contract = new Contract(account, contractName);
 
   let minter = account.accountId ?? "aa.near";
-  
+
   let [oneNFT, costLinkDrop, tokenLeft] = await Promise.all([
     NEAR.from(await contract.total_cost({ num: 1, minter })),
     NEAR.from(await contract.cost_of_linkdrop({ minter })),
