@@ -1,3 +1,7 @@
+:root {
+  --many-count: "3";
+}
+
 .generate {
   display: flex;
   flex-direction: column;
@@ -190,7 +194,7 @@
             position: relative;
 
             &::before {
-              content: '3';
+              content: var(--many-count);
               position: absolute;
             }
           }

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import getConfig from '../config';
-import * as nearAPI from 'near-api-js';
-import { getWallet, getContract, getPrice } from '../utils/near-utils';
-import { KeyPairEd25519 } from 'near-api-js/lib/utils';
+import getConfig from "../config";
+import * as nearAPI from "near-api-js";
+import { getWallet, getContract, getPrice } from "../utils/near-utils";
+import { KeyPairEd25519 } from "near-api-js/lib/utils";
 
 export const {
   networkId,
@@ -32,8 +32,8 @@ export const initNear =
   async ({ update, getState }) => {
     try {
       const { near, wallet } = await getWallet();
-      const price = await getPrice(near);
-      
+      const price = await getPrice(wallet.account());
+
       wallet.signIn = (successUrl) => {
         wallet.requestSignIn({
           successUrl,
@@ -43,9 +43,9 @@ export const initNear =
       const signOut = wallet.signOut;
       wallet.signOut = () => {
         signOut.call(wallet);
-        update('wallet.signedIn', false);
-        update('', { account: null });
-        localStorage.removeItem('undefined_wallet_auth_key');
+        update("wallet.signedIn", false);
+        update("", { account: null });
+        localStorage.removeItem("undefined_wallet_auth_key");
         wallet.signedIn = wallet.isSignedIn();
         new nearAPI.keyStores.BrowserLocalStorageKeyStore().clear();
       };
@@ -55,19 +55,19 @@ export const initNear =
       let account;
       if (wallet.signedIn) {
         account = wallet.account();
-        const contract = getContract(account, contractMethods);
+        const contract = getContract(account);
 
         wallet.balance = formatNearAmount(
           (await wallet.account().getAccountBalance()).available,
-          2,
+          2
         );
 
-        await update('', { wallet, account, contract, price, near });
+        await update("", { wallet, account, contract, price, near });
 
         // take lindDropArray from Local Storage for only that user that connect with near wallet
         let linkDropArray =
           JSON.parse(
-            localStorage.getItem(`linkDropArray:${account.accountId}`),
+            localStorage.getItem(`linkDropArray:${account.accountId}`)
           ) || [];
 
         // tokensLeft - count of how many tokens left
@@ -97,14 +97,19 @@ export const initNear =
         const soldOut = tokensLeft === 0;
         // filter linkDrops that was used
         linkDropArray = linkDropArray.filter(({ isUsed }) => !isUsed);
-        
+
         // update LocalStorage
         localStorage.setItem(
           `linkDropArray:${account.accountId}`,
-          JSON.stringify([...linkDropArray]),
+          JSON.stringify([...linkDropArray])
         );
 
         const state = getState();
+        const manyCount =
+          (await contract.remaining_allowance({
+            account_id: account.accountId,
+          })) ?? state.app.manyCount;
+
         const app = {
           ...state.app,
           misfitsArray,
@@ -112,9 +117,10 @@ export const initNear =
           linkDropArray,
           soldOut,
           tokensLeft,
+          manyCount,
         };
 
-        await update('', { app });
+        await update("", { app });
 
         // Debugging start
         // console.log('tokens_left:', tokensLeft);
@@ -125,9 +131,9 @@ export const initNear =
         return;
       }
 
-      await update('', { near, wallet, account, price });
+      await update("", { near, wallet, account, price });
       // console.log('state:', getState());
     } catch (e) {
-      console.log('error:', e);
+      console.log("error:", e);
     }
   };
