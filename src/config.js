@@ -1,4 +1,4 @@
-const contractName = process.env.REACT_APP_CONTRACT_NAME || 'panda.tenk.testnet';
+const contractName = process.env.REACT_APP_CONTRACT_NAME || 'tora.tenk.near';
 // const contractName = process.env.REACT_APP_CONTRACT_NAME || 'misfits.tenk.near';
 
 
@@ -39,10 +39,10 @@ export default function getConfig() {
   // if (process.env.REACT_APP_ENV === 'prod') {
   config = {
     ...config,
-    // networkId: 'mainnet',
-    // nodeUrl: 'https://rpc.mainnet.near.org',
-    // walletUrl: 'https://wallet.near.org',
-    // helperUrl: 'https://helper.mainnet.near.org',
+    networkId: 'mainnet',
+    nodeUrl: 'https://rpc.mainnet.near.org',
+    walletUrl: 'https://wallet.near.org',
+    helperUrl: 'https://helper.mainnet.near.org',
   };
   // }
 
