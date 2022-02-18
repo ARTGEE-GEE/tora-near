@@ -13,8 +13,8 @@ const Reveal = ({ handleClick, title }) => (
       <div className="reveal__text-hover">Reveal</div> */}
     </div>
     <div className="item">
-      {/* <div className="title"><span>#{title.padStart(4, '0')}</span> | <span className="reveal__question-grey">?</span></div> */}
-      <div className="title"><span>#{title.padStart(4, '0')}</span></div>
+      <div className="title"><span>#{title.padStart(4, '0')}</span> | <span className="reveal__question-grey">?</span></div>
+      {/* <div className="title"><span>#{title.padStart(4, '0')}</span></div> */}
 
     </div>
   </div>

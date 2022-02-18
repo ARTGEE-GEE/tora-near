@@ -4,7 +4,7 @@ import NftItem from '../NftItem'
 const NFTList = (props) => {
   const { state, update } = useContext(appStore);
   const { app } = state;
-  
+
   const handleClick = (revealMisfits) => {
     
     const newRevealMisfits = { ...app.revealMisfits, ...revealMisfits };
