@@ -9,7 +9,7 @@ const useBuy = (isLinkDrop) => {
   const { mintNft } = useMintNft();
   const { createLinkDrop } = useLinkDrop();
 
-  const text = isLinkDrop ? 'Generate gift links' : 'Buy more';
+  const text = isLinkDrop ? 'Generate gift links' : 'Mint More';
 
   const [count, setCount] = useState(1);
   const [showMessage, setShowMessage] = useState(false);

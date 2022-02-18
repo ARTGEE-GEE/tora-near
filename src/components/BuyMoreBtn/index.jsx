@@ -1,40 +1,40 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { appStore } from "../../state/app";
-import { useContext, useState } from "react";
+// import { appStore } from "../../state/app";
+// import { useContext, useState } from "react";
 
 const BuyMoreBtn = ({ className, text, onClick }) => {
-  const { state } = useContext(appStore);
-  const { app } = state;
-  const [dis, setDis] = useState("none");
+  // const { state } = useContext(appStore);
+  // const { app } = state;
+  // const [dis, setDis] = useState("none");
 
-  const isBuy = () => {
-    if (text === "Buy more" || text === "Generate gift links") {
-      if (app.misfitsArray.length + app.linkDropArray.length < 4) {
-        onClick();
-      } else {
-        setDis("flex");
-      }
-    } else {
-      onClick();
-    }
-  };
+  // const isBuy = () => {
+  //   if (text === "Buy more" || text === "Generate gift links") {
+  //     if (app.misfitsArray.length + app.linkDropArray.length < 4) {
+  //       onClick();
+  //     } else {
+  //       setDis("flex");
+  //     }
+  //   } else {
+  //     onClick();
+  //   }
+  // };
   return (
     <>
       <button
         type="button"
         className={`buy-more-btn ${className || ""}`}
-        onClick={isBuy}
+        onClick={() => onClick()}
       >
         <span>{text}</span>
       </button>
-      <div className={`isBuy`} style={{ display: dis }}>
+      {/* <div className={`isBuy`} style={{ display: none }}>
         <div className="isBuy-box">
           <h4>Notice</h4>
           <p>You have exceeded your purchase limit!</p>
           <button onClick={() => setDis("none")}>OK</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
