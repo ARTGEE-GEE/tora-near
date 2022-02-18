@@ -10,7 +10,7 @@ const LogOut = () => {
           <div className="text">
             <p>1) Connect the wallet at the top of the page;</p>
             <p>2) Click "Buy more".</p>
-            <p>3) Pick the amount of TORA: 1/5/10;</p>
+            <p>3) Pick the amount of TORA: 1 or 10;</p>
             <p>The price for one is only 8.5 Ⓝ.</p>
             {/* <p>*登陆钱包查看您拥有的 NFT</p> */}
           </div>
